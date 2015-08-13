@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Appliances Tracker</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+    </script>
+    <style type="text/css">
+    .redBackground{
+      background-color: orange;
+    }
+    </style>
+    <!--style type="text/css">
+      .navbar-default {
+        border-width: 5px;
+        border-color: #0066FF;
+        border-style: outset;
+      }
+      .nav{
+        border-color: #0066FF;
+      }
+      .navbar-nav{
+        border-color: #0066FF;
+      }
+      .color-me{
+        color: blue;
+      }
+      body{
+        background-image: url('http://p-fst2.pixstatic.com/506a203cdbd0cb3077000f9f._w.1500_s.fit_.jpg');
+        background-size: contain;
+      }
+    </style-->
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default redBackground">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand">TSR Appliances</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li class="active "><a href="homepage.html">Home</a></li>
+            <li><a href="repair_page.html">Request a Repair</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-info-sign">
+            </span> Check Repair Status</a>
+            <li><a href="#"><span class="glyphicon glyphicon-user">
+            </span> Manager Login</a></li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      <!-- NAVBAR -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="http://p-fst1.pixstatic.com/506a203cdbd0cb3077000f9f._w.1500_s.fit_.jpg" alt="Chania">
+              </div>
+
+              <div class="item">
+                <img src="img_chania2.jpg" alt="Chania">
+              </div>
+
+              <div class="item">
+                <img src="img_flower.jpg" alt="Flower">
+              </div>
+
+              <div class="item">
+                <img src="img_flower2.jpg" alt="Flower">
+              </div>
+            </div>
+          </div>
+          <h1 class="text-center">Need a Microfridge Repaired?</h1>
+          <button type="button" class="btn btn-primary center-block">
+            Get Started!</button>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <h3 class="text-center">Manager? Log in!</h3>
+          <form role="form">
+            <div class="form-group">
+              <label for="manager_email">Email Address:</label>
+              <input type="email" class="form-control" id="manager_email" 
+                placeholder="jon.stewart@tufts.edu">
+            </div>
+            <div class="form-group">
+              <label for="manager_password">Password:</label>
+              <input type="password" class="form-control" id="manager_password"
+                placeholder="TuFt$JuMb0!">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox">Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="redBackground">
+      <div class="row col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2
+          col-sm-8 col-sm-offset-2">
+        <h2 class="text-center">Check Repair Status<p><small>
+          If you already submitted a request, check your status here</small></p>
+        </h2>
+      </div>
+      <div class="row col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4
+          col-sm-4 col-sm-offset-4">
+        <form role="form">
+          <div class="form-group text-center">
+            <label for="confirmation_code">Confirmation code</label>
+            <input type"text" class="form-control input-small" 
+              id="confirmation_code">
+          </div>
+          <button type="submit" class="btn btn-default center-block">
+            Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
