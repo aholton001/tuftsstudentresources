@@ -41,6 +41,24 @@
     body{
       background-color: rgb(253, 253, 253);  
     }
+    .bottomBuffer{
+      margin-bottom: 30px;
+    }
+    .constant-image{
+      height: 300px;
+    }
+    .short-border{
+      width: 80%;
+    }
+    div.c-wrapper{
+    width: 80%; /* for example */
+    margin: auto;
+    }
+    .carousel-inner > .item > img, 
+    .carousel-inner > .item > a > img{
+    width: 200px; /* use this, or not */
+    margin: auto;
+    }
     </style>
     <!--style type="text/css">
       .navbar-default {
@@ -120,11 +138,11 @@
       <!--Repair Request and Manager Login -->  
     <div class="container">
       <div class="row">
-       
+
       </div>
     </div>
     <!--Check Repair Status-->
-    <div class="container lightRedBackground">
+    <div class="container lightRedBackground short-border">
       <div class="row">
         <div class="row col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2
           col-sm-8 col-sm-offset-2">
@@ -146,16 +164,45 @@
       </div>
     </div>
   </div>
-    <!--Check Repair Status-->
-  <!-- NAVBAR -->
-    <nav class="navbar navbar-default navbar-fixed-bottom">
-      <div class="container-fluid center-block">
-        <div class="center-block">
-          <p class="text-center text-muted">Copyright 2015</p>
-          <p class="text-center text-muted">Amoses Holton</p>
+
+  <div class="container c-wrapper">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active constant-image">
+          <img src="http://tuftsstudentresources.com/files/store/tv.jpg" alt="Chania">
         </div>
+
+        <div class="item constant-image">
+          <img src="http://www.tuftsstudentresources.com/files/TSRLogo.gif" alt="Flower">
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-    </nav>
-      <!-- NAVBAR -->
+    </div>
+  </div>  
+  <footer class="footer">
+      <div class="container">
+        <p class="text-muted text-center">Created by Amoses Holton</p>
+        <p class="text-muted text-center">Copyright 2015</p>
+      </div>
+    </footer>
+    <!--Check Repair Status-->
   </body>
 </html>
