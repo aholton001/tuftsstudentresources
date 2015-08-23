@@ -9,6 +9,11 @@
     </script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
     </script>
+    <script type="text/javascript">
+      $(function() {
+        $( "#datepicker" ).datepicker();
+      });
+    </script>
     <style type="text/css">
     .redBackground{
       background-color: orange;
@@ -31,15 +36,19 @@
       height: 250px;
       max-height: 250px;
     }
-    .lightRedBackground{
+    .lightRedBackgroundRepair{
       background: rgba(255, 153, 0, 0.7);
       width: 100%;
-      margin-top: 20px;
-      margin-bottom: 30px;
       border-radius: 25px;
     }
     body{
       background-color: rgb(253, 253, 253);  
+    }
+    .topSpace{
+      margin-top: 50px;
+    }
+    .bottomSpace{
+      margin-bottom: 50px;
     }
     </style>
     <!--style type="text/css">
@@ -87,75 +96,131 @@
       </div>
     </nav>
       <!-- NAVBAR -->
-    <!--Repair Request and Manager Login -->  
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-8 col-sm-8">
-          <img class="center-block" src="http://drwzpk38qkpfb.cloudfront.net/www.universityandstudentservices.com/uploaded/images/New_Temp/New_images/microfridge-icon-blue.png">
-          <h1 class="center-block text-center">Need a Microfridge Repaired?</h1>
-          <a href="repair_page.html"><button type="button" class="btn btn-primary center-block"
-             href="repair_page.html">Get Started!</button></a>
+        <h1 class="text-center">Please fill out the form below!</h1>
+      </div>
+      <div class="row topSpace">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" class="form-control" id="firstName">
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-          <h3 class="text-center">Manager? Log in!</h3>
-          <form role="form">
-            <div class="form-group">
-              <label for="manager_email">Email Address:</label>
-              <input type="email" class="form-control" id="manager_email" 
-                placeholder="jon.stewart@tufts.edu">
-            </div>
-            <div class="form-group">
-              <label for="manager_password">Password:</label>
-              <input type="password" class="form-control" id="manager_password"
-                placeholder="TuFt$JuMb0!">
-            </div>
-            <div class="checkbox">
-              <label><input type="checkbox">Remember me</label>
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
+        <div class="form-group topSpace">
+          <label for="lastName">Last Name:</label>
+          <input type="text" class="form-control" id="lastName">
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="form-group">
+          <label for="dorm">Dormitory Hall/House Name:</label>
+          <select class="form-control" id="dorm" placeholder="Jumbo Aparments">
+            <option>Carmichael Hall</option>
+            <option>Haskell Hall</option>
+            <option>Hill Hall</option>
+            <option>Hillsides Apartments</option>
+            <option>Hodgdon Hall</option>
+            <option>Houston Hall</option>
+            <option>Lewis Hall</option>
+            <option>Metcalf Hall</option>
+            <option>Miller Hall</option>
+            <option>Richardson House</option>
+            <option>South Hall</option>
+            <option>Tilton Hall</option>
+            <option>West Hall</option>
+            <option>Wren Hall</option>       
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group topSpace">
+          <label for="roomNum">Room Number:</label>
+          <input type="text" class="form-control" id="roomNum">
         </div>
       </div>
     </div>
-      <!--Repair Request and Manager Login -->  
-    <div class="container">
-      <div class="row">
-       
-      </div>
-    </div>
-    <!--Check Repair Status-->
-    <div class="container lightRedBackground">
-      <div class="row">
-        <div class="row col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2
-          col-sm-8 col-sm-offset-2">
-        <h2 class="text-center">Check Repair Status<p><small>
-          If you already submitted a request, check your status here</small></p>
-        </h2>
-      </div>
-      <div class="row col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4
-          col-sm-4 col-sm-offset-4">
-        <form role="form">
-          <div class="form-group text-center">
-            <label for="confirmation_code">Confirmation code</label>
-            <input type"text" class="form-control" 
-              id="confirmation_code">
-          </div>
-          <button type="submit" class="btn btn-default center-block">
-            Submit</button>
-        </form>
+    <div class="row topSpace">
+      <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-6
+        col-md-6 col-sm-6">
+        <div class="form-group">
+          <label for="problemDescription">Please Describe the Problem</label>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="pictureFile">File input</label>
+          <input type="file" id="pictureFile">
+          <p class="help-block">Attach any images that will help describe the problem if needed
+            .</p>
+        </div>
       </div>
     </div>
   </div>
-    <!--Check Repair Status-->
-  <!-- NAVBAR -->
-    <nav class="navbar navbar-default navbar-fixed-bottom">
-      <div class="container-fluid center-block">
-        <div class="center-block">
-          <p class="text-center text-muted">Copyright 2015</p>
-          <p class="text-center text-muted">Amoses Holton</p>
+
+    <!--Available Times -->
+  <div class="container">
+    <div class="row lightRedBackgroundRepair">
+      <div class="col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-lg-4
+        col-md-4 col-sm-4">
+        <h2 class="text-center">When are you free?</h2>
+      </div>
+    </div>
+    <div class="row topSpace">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <h3>First Choice</h3>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="form-group">
+          <label for="firstDate">Date:</label>
+          <input type="text" id="firstDate">
+        </div>
+        <div class="form-group">
+          <label for="firstTime">Time:</label>
+          <input type="text" id="firstTime">
         </div>
       </div>
-    </nav>
-      <!-- NAVBAR -->
+    </div>
+    <div class="row topSpace">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <h3>Second Choice</h3>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="form-group">
+          <label for="firstDate">Date:</label>
+          <input type="text" id="firstDate">
+        </div>
+        <div class="form-group">
+          <label for="firstTime">Time:</label>
+          <input type="text" id="firstTime">
+        </div>
+      </div>
+    </div>
+    <div class="row topSpace">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <h3>Third Choice</h3>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="form-group">
+          <label for="firstDate">Date:</label>
+          <input type="text" id="firstDate">
+        </div>
+        <div class="form-group">
+          <label for="firstTime">Time:</label>
+          <input type="text" id="firstTime">
+        </div>
+      </div>
+    </div>
+  </div>
+      <!--Available Times -->
+  <div class="container">
+    <div class="row topSpace bottomSpace">
+      <button class="btn center-block btn-lg btn-primary">Submit</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted text-center">Created by Amoses Holton</p>
+      <p class="text-muted text-center">Copyright 2015</p>
+    </div>
+  </footer>
   </body>
 </html>

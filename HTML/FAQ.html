@@ -87,75 +87,52 @@
       </div>
     </nav>
       <!-- NAVBAR -->
-    <!--Repair Request and Manager Login -->  
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-8 col-sm-8">
-          <img class="center-block" src="http://drwzpk38qkpfb.cloudfront.net/www.universityandstudentservices.com/uploaded/images/New_Temp/New_images/microfridge-icon-blue.png">
-          <h1 class="center-block text-center">Need a Microfridge Repaired?</h1>
-          <a href="repair_page.html"><button type="button" class="btn btn-primary center-block"
-             href="repair_page.html">Get Started!</button></a>
+    <div class="panel-group" id="FAQ">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#question1">
+            How long is my fridge rental for?</a>
+          </h4>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-          <h3 class="text-center">Manager? Log in!</h3>
-          <form role="form">
-            <div class="form-group">
-              <label for="manager_email">Email Address:</label>
-              <input type="email" class="form-control" id="manager_email" 
-                placeholder="jon.stewart@tufts.edu">
-            </div>
-            <div class="form-group">
-              <label for="manager_password">Password:</label>
-              <input type="password" class="form-control" id="manager_password"
-                placeholder="TuFt$JuMb0!">
-            </div>
-            <div class="checkbox">
-              <label><input type="checkbox">Remember me</label>
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
-        </div>
-      </div>
-    </div>
-      <!--Repair Request and Manager Login -->  
-    <div class="container">
-      <div class="row">
-       
-      </div>
-    </div>
-    <!--Check Repair Status-->
-    <div class="container lightRedBackground">
-      <div class="row">
-        <div class="row col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2
-          col-sm-8 col-sm-offset-2">
-        <h2 class="text-center">Check Repair Status<p><small>
-          If you already submitted a request, check your status here</small></p>
-        </h2>
-      </div>
-      <div class="row col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4
-          col-sm-4 col-sm-offset-4">
-        <form role="form">
-          <div class="form-group text-center">
-            <label for="confirmation_code">Confirmation code</label>
-            <input type"text" class="form-control" 
-              id="confirmation_code">
+        <div id="question1" class="panel-collapse collapse in">
+          <div class="panel-body">Your rental is for the school year, it will be delivered the week before school starts and will be picked up during finals period of spring semester.
           </div>
-          <button type="submit" class="btn btn-default center-block">
-            Submit</button>
-        </form>
-      </div>
-    </div>
-  </div>
-    <!--Check Repair Status-->
-  <!-- NAVBAR -->
-    <nav class="navbar navbar-default navbar-fixed-bottom">
-      <div class="container-fluid center-block">
-        <div class="center-block">
-          <p class="text-center text-muted">Copyright 2015</p>
-          <p class="text-center text-muted">Amoses Holton</p>
         </div>
       </div>
-    </nav>
-      <!-- NAVBAR -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#question2">
+            I broke my microwave glass plate, what should I do?</a>
+          </h4>
+        </div>
+        <div id="question2" class="panel-collapse collapse">
+          <div class="panel-body">You will be charged $20, please fill out the repair form and
+            mention that you broke your microwave plate. If you don't do this immediately 
+            during the school year you will still be charged $20 at pick up.</div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#FAQ" href="#question3">
+              Can I request that my Microwave be detached?</a>
+          </h4>
+        </div>
+        <div id="question3" class="panel-collapse collapse">
+          <div class="panel-body">No. The microwave of the microfridge is only allowed by
+            Residential life because of the safe-plug technology that prevents
+            dangerous electrical failures from taking place.</div>
+        </div>
+      </div>
+    </div>
+    <!--Check Repair Status-->
+    <footer class="footer">
+        <div class="container">
+          <p class="text-muted text-center">Created by Amoses Holton</p>
+          <p class="text-muted text-center">Copyright 2015</p>
+        </div>
+      </footer>
   </body>
 </html>
